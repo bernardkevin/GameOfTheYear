@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class MouseController : MonoBehaviour {
 
-	public int mX,mY;
-
-	private int rotationOffSet = -90;
-	private float x,y,rotZ;
+	public double mX,mY;
+	private float x,y;
 
 	public 
 	
@@ -17,12 +16,11 @@ public class MouseController : MonoBehaviour {
 
 		Vector3 difference = GetComponent<Camera>().ScreenToWorldPoint (new Vector3(x,y,Mathf.Abs(transform.position.z))) - transform.position;
 
-		mX = (int)difference.x;
-		mY = (int)difference.y;
+		mX = Math.Ceiling(difference.x + transform.position.x);
+		mY = Math.Ceiling(difference.y + transform.position.y);
+	}
 
-		//difference.Normalize (); // x+y+z=1
-
-		//rotZ = Mathf.Atan2 (difference.y, difference.x) * Mathf.Rad2Deg; // angle °
-		//transform.rotation = Quaternion.Euler (0f, 0f, rotZ + rotationOffSet);
+	void OnGUI(){
+		GUI.Box(new Rect(0,0,100,20),"("+mX+";"+mY+")");
 	}
 }
