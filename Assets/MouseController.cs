@@ -4,11 +4,9 @@ using System;
 
 public class MouseController : MonoBehaviour {
 
-	public double mX,mY;
+	public static double mX,mY;
 	private float x,y;
 
-	public 
-	
 	// Update is called once per frame
 	void FixedUpdate () {
 		x = Input.mousePosition.x;
@@ -18,9 +16,5 @@ public class MouseController : MonoBehaviour {
 
 		mX = Math.Ceiling(difference.x + transform.position.x);
 		mY = Math.Ceiling(difference.y + transform.position.y);
-	}
-
-	void OnGUI(){
-		GUI.Box(new Rect(0,0,100,20),"("+mX+";"+mY+")");
 	}
 }

@@ -1,0 +1,22 @@
+
+[00]	SAS
+[01]	port pour navette
+
+[02]	panneaux solaire
+[03]	reservoir Oxygene
+[04]	refectoire
+[05]	entrepot
+
+[06]	zone de recherche
+[07]	zone de communication
+
+[08]	systeme support de vie
+[09]	-recycleur oxygene
+[10]	-recycleur eau
+
+[11]	
+[12]	
+[13]	
+[14]	
+[15]	
+[16]	
