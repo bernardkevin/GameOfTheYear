@@ -3,7 +3,7 @@ using System.Collections;
 
 public class GravityAttractor2d : MonoBehaviour {
 
-	public float gravity = 1;
+	public float gravity = -1;
 
 	public void Attract(Transform body){
 		Vector3 gravityUp = (body.position - transform.position).normalized;

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerController2d : MonoBehaviour {
-	public float moveSpeed = 15;
+	public float moveSpeed = 5;
 	private Vector3 moveDir;
 
 	// Use this for initialization
@@ -12,7 +12,7 @@ public class PlayerController2d : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		moveDir = new Vector2(Input.GetAxisRaw("Horizontal"),0).normalized;
+		moveDir = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Jump")).normalized;
 	}
 
 	void FixedUpdate(){

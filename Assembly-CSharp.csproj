@@ -51,14 +51,9 @@
      <Compile Include="Assets\GravitySphere2D\GravityAttractor2d.cs" />
      <Compile Include="Assets\GravitySphere2D\GravityBody2d.cs" />
      <Compile Include="Assets\GravitySphere2D\PlayerController2d.cs" />
-     <Compile Include="Assets\Management.cs" />
-     <Compile Include="Assets\Modules\Controller.cs" />
-     <Compile Include="Assets\Modules\Module.cs" />
-     <Compile Include="Assets\Modules\OxygenCapacitor.cs" />
-     <Compile Include="Assets\Modules\SAS.cs" />
-     <Compile Include="Assets\Modules\SolarPanel.cs" />
      <Compile Include="Assets\MouseController.cs" />
      <Compile Include="Assets\MovingCamera.cs" />
+     <Compile Include="Assets\PlanetManager.cs" />
      <None Include="Assets\BlockList.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
