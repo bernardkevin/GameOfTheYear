@@ -48,6 +48,9 @@
      <Compile Include="Assets\GravitySphere\GravityAttractor.cs" />
      <Compile Include="Assets\GravitySphere\GravityBody.cs" />
      <Compile Include="Assets\GravitySphere\PlayerController.cs" />
+     <Compile Include="Assets\GravitySphere2D\GravityAttractor2d.cs" />
+     <Compile Include="Assets\GravitySphere2D\GravityBody2d.cs" />
+     <Compile Include="Assets\GravitySphere2D\PlayerController2d.cs" />
      <Compile Include="Assets\Management.cs" />
      <Compile Include="Assets\Modules\Controller.cs" />
      <Compile Include="Assets\Modules\Module.cs" />
