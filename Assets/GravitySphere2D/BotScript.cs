@@ -31,7 +31,8 @@ public class BotScript : MonoBehaviour {
 	void Randomize(){
 		LR = (int)Random.Range(-2.0F, 2.0F);
 		time = Random.Range(1.0F, 5.0F);
-		over=false;
 		lastTime = Time.time;
+		over=false;
 	}
+
 }
