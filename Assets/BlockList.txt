@@ -1,22 +1,31 @@
 
-[00]	SAS
-[01]	port pour navette
+[00]	Controlleur				//none 				//-energie
+[00]	SAS						//metal 			//-energie
 
-[02]	panneaux solaire
-[03]	reservoir Oxygene
-[04]	refectoire
-[05]	entrepot
+[02]	panneaux solaire		//metal 			//+energie
+[02]	Gros Panneaux solaire	//metal 			//+energie
 
-[06]	zone de recherche
-[07]	zone de communication
+[07]	zone de communication	//metal				//+food +metal
 
-[08]	systeme support de vie
-[09]	-recycleur oxygene
-[10]	-recycleur eau
+[05]	entrepot				//metal x1000		//-energie +2000 metalmax +2000 foodmax
+[05]	Gros Entrepot			//metal	x5000		//-energie +10000 metalmax +10000 foodmax
+[03]	reservoir Oxygene		//metal 			//-energie
+[03]	Gros Reservoir Oxygene	//metal 			//-energie
+[03]	Capacitor Energy		//metal 			//-energie
+[03]	Gros Capacitor Energy	//metal 			//-energie
+[04]	refectoire				//metal 			//-energie
 
-[11]	
-[12]	
-[13]	
-[14]	
-[15]	
+[06]	laboratoire de recherche//metal 			//-energie
+
+[08]	systeme support de vie	//metal 			//-energie
+[09]	-recycleur Oxygene		//metal 			//-energie +oxygene
+[10]	-recycleur eau			//metal 			//-energie +water
+
+[11]	Réacteur Nucléaire		//metal 			//+energie
+[12]	gravité artificielle	//metal 			//-energie
+[13]	-station hydroponique	//metal 			//-energie -water +food
+[01]	port pour navette		//metal				//-energie		(ravitaillement,colon,expedition)
+
+[14]	tourelle				//metal
+[15]	raffinerie				//metal
 [16]	

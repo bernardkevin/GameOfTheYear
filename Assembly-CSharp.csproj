@@ -45,8 +45,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GravitySphere\GravityAttractor.cs" />
+     <Compile Include="Assets\GravitySphere\GravityBody.cs" />
+     <Compile Include="Assets\GravitySphere\PlayerController.cs" />
      <Compile Include="Assets\Management.cs" />
-     <Compile Include="Assets\Module.cs" />
+     <Compile Include="Assets\Modules\Controller.cs" />
+     <Compile Include="Assets\Modules\Module.cs" />
+     <Compile Include="Assets\Modules\OxygenCapacitor.cs" />
+     <Compile Include="Assets\Modules\SAS.cs" />
+     <Compile Include="Assets\Modules\SolarPanel.cs" />
      <Compile Include="Assets\MouseController.cs" />
      <Compile Include="Assets\MovingCamera.cs" />
      <None Include="Assets\BlockList.txt" />
