@@ -45,14 +45,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BotScript.cs" />
-     <Compile Include="Assets\GlobalManagement.cs" />
      <Compile Include="Assets\GravitySphere2D\GravityAttractor2d.cs" />
      <Compile Include="Assets\GravitySphere2D\GravityBody2d.cs" />
      <Compile Include="Assets\GravitySphere2D\PlayerController2d.cs" />
      <Compile Include="Assets\MouseController.cs" />
-     <Compile Include="Assets\MovingCamera.cs" />
-     <Compile Include="Assets\PlanetManager.cs" />
      <Compile Include="Assets\Script\Bot.cs" />
      <Compile Include="Assets\Script\Building.cs" />
      <Compile Include="Assets\Script\Extractor.cs" />
@@ -60,15 +56,24 @@
      <Compile Include="Assets\Script\Housing.cs" />
      <Compile Include="Assets\Script\Human.cs" />
      <Compile Include="Assets\Script\IA.cs" />
+     <Compile Include="Assets\Script\MovingCamera.cs" />
      <Compile Include="Assets\Script\Planet.cs" />
+     <Compile Include="Assets\Script\RotateOrbite.cs" />
      <Compile Include="Assets\Script\SolarPanel.cs" />
      <Compile Include="Assets\Script\Universe.cs" />
      <Compile Include="Assets\Script\Water.cs" />
+     <None Include="Assets\ListeSpriteTo do.txt" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

@@ -16,8 +16,8 @@ public class Planet : MonoBehaviour {
 	private int rotationOffSet = -90;
 	private float x,y,rotZ;
 
-	public bool showBuildMode;//affichage du HUD de construction
-	public GameObject buildMode;//affichage du HUD de construction
+	public bool showHUD;//affichage du HUD de construction
+	public GameObject HUD;//affichage du HUD de construction
 
 	// Use this for initialization
 	void Awake () {
@@ -34,10 +34,10 @@ public class Planet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(showBuildMode) buildMode.SetActive(true);
-		else buildMode.SetActive(false);
+		if(showHUD) HUD.SetActive(true);
+		else HUD.SetActive(false);
 
-		if(Input.GetKeyDown(KeyCode.Mouse1))showBuildMode = false;
+		if(Input.GetKeyDown(KeyCode.Mouse1))showHUD = false;
 
 		if(buildingSelected != null){
 			AddBuilding();
@@ -74,7 +74,7 @@ public class Planet : MonoBehaviour {
 		rotZ = Mathf.Atan2 (difference.y, difference.x) * Mathf.Rad2Deg;
 	}
 
-	public void Order(){
+	public void OrderBot(){
 		for(int i = 0;i<bots.Length;i++){
 			if(bots[i]==null){
 				bots[i]=bots[i+1];
@@ -84,6 +84,6 @@ public class Planet : MonoBehaviour {
 	}
 
 	public void OnMouseDown(){
-		showBuildMode = true;
+		showHUD = true;
 	}
 }

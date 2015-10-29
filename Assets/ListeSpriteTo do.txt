@@ -1,0 +1,13 @@
+TODO
+
+-Nuage
+-Satellite
+-Fusée
+-Batiments(->logement ->extracteur ->panneux solaire ->purificateur d'eau ->base de lancement ->eolienne ->ferme/serre)
+-Planet(->terre ->sable ->pierre ->avec Anneaux)
+-Robot
+-Alien
+
+DONE
+
+-Human

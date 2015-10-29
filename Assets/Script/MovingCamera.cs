@@ -17,7 +17,7 @@ public class MovingCamera : MonoBehaviour {
 		if(GetComponent<Camera>().orthographicSize>5 && GetComponent<Camera>().orthographicSize<10)
 			speed = 0.5f;
 		if(GetComponent<Camera>().orthographicSize>1 && GetComponent<Camera>().orthographicSize<5)
-			speed = 0.1f;
+			speed = 0.3f;
 		Move();
 		Zoom();
 	}

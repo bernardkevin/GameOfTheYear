@@ -35,8 +35,8 @@ public abstract class IA : MonoBehaviour {
 	}
 
 	void Randomize(){
-		LR = Random.Range(-1.0F, 1.0F);
-		time = Random.Range(1.0F, 5.0F);
+		LR = Random.Range(-1.0F, 2.0F);
+		time = Random.Range(0.0F, 5.0F);
 		lastTime = Time.time;
 		over=false;
 	}
