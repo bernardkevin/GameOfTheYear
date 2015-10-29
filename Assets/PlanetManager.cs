@@ -30,6 +30,12 @@ public class PlanetManager : MonoBehaviour {
 		if(buildingSelected != null){
 			buildingSelected.transform.rotation = Quaternion.Euler (0f, 0f, rotZ + rotationOffSet);
 			if(Input.GetKeyDown(KeyCode.Mouse0)){
+				//buildingSelected.GetComponent<Building>().planet = gameObject.transform.parent.gameObject;
+				buildingSelected.transform.parent = gameObject.transform.parent.gameObject.transform;
+				SelectBuilding(-1);
+			}
+			if(Input.GetKeyDown(KeyCode.Mouse1)){
+				Destroy(buildingSelected);
 				SelectBuilding(-1);
 			}
 		}

@@ -3,9 +3,12 @@ using System.Collections;
 
 public class BotScript : MonoBehaviour {
 
+	public string name;
+	public string statut;// free -> working -> dead
+	public GameObject planet;
+
 	public float moveSpeed = 1;
 	private Vector3 moveDir;
-
 	public int LR;
 	public float time,lastTime;
 	public bool over;
@@ -13,18 +16,22 @@ public class BotScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		over=true;
+		name = "jean Paul";
+		statut = "free";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Time.time - lastTime < time && !over)
-			moveDir = new Vector2(LR,0).normalized;
-		else
-			Randomize();
+		if(statut == "free"){
+			if(Time.time - lastTime < time && !over)
+				moveDir = new Vector2(LR,0).normalized;
+			else
+				Randomize();
+		}
 	}
 
 	void FixedUpdate(){
-		if(Time.time - lastTime < time)
+		if(Time.time - lastTime < time && statut == "free")
 			GetComponent<Rigidbody2D>().MovePosition(GetComponent<Rigidbody2D>().position + (Vector2)transform.TransformDirection(moveDir) * moveSpeed * Time.deltaTime);
 	}
 
@@ -35,4 +42,9 @@ public class BotScript : MonoBehaviour {
 		over=false;
 	}
 
+	void OnMouseOver(){
+		if(Input.GetKeyDown(KeyCode.Mouse0)){
+			GlobalManagement.Selected[0]=gameObject;
+		}
+	}
 }

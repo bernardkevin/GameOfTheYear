@@ -45,14 +45,25 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GravitySphere2D\BotScript.cs" />
+     <Compile Include="Assets\BotScript.cs" />
+     <Compile Include="Assets\GlobalManagement.cs" />
      <Compile Include="Assets\GravitySphere2D\GravityAttractor2d.cs" />
      <Compile Include="Assets\GravitySphere2D\GravityBody2d.cs" />
      <Compile Include="Assets\GravitySphere2D\PlayerController2d.cs" />
      <Compile Include="Assets\MouseController.cs" />
      <Compile Include="Assets\MovingCamera.cs" />
      <Compile Include="Assets\PlanetManager.cs" />
-     <None Include="Assets\BlockList.txt" />
+     <Compile Include="Assets\Script\Bot.cs" />
+     <Compile Include="Assets\Script\Building.cs" />
+     <Compile Include="Assets\Script\Extractor.cs" />
+     <Compile Include="Assets\Script\Farm.cs" />
+     <Compile Include="Assets\Script\Housing.cs" />
+     <Compile Include="Assets\Script\Human.cs" />
+     <Compile Include="Assets\Script\IA.cs" />
+     <Compile Include="Assets\Script\Planet.cs" />
+     <Compile Include="Assets\Script\SolarPanel.cs" />
+     <Compile Include="Assets\Script\Universe.cs" />
+     <Compile Include="Assets\Script\Water.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
