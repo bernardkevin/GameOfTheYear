@@ -51,6 +51,7 @@
      <Compile Include="Assets\MouseController.cs" />
      <Compile Include="Assets\Script\Bot.cs" />
      <Compile Include="Assets\Script\Building.cs" />
+     <Compile Include="Assets\Script\CommandScript.cs" />
      <Compile Include="Assets\Script\Extractor.cs" />
      <Compile Include="Assets\Script\Farm.cs" />
      <Compile Include="Assets\Script\Housing.cs" />
@@ -63,17 +64,11 @@
      <Compile Include="Assets\Script\Universe.cs" />
      <Compile Include="Assets\Script\Water.cs" />
      <None Include="Assets\ListeSpriteTo do.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

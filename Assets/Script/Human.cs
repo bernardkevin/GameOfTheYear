@@ -5,7 +5,7 @@ public class Human : IA {
 
 	void Start () {
 		life = 100;
-		strenght = 10;
+		strength = 10;
 		state = 0;
 	}
 }

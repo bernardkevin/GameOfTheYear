@@ -5,7 +5,7 @@ public class Bot : IA {
 
 	void Start () {
 		life = 20;
-		strenght = 1;
+		strength = 1;
 		state = 0;
 	}
 }

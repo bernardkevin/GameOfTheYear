@@ -3,17 +3,17 @@ using System.Collections;
 
 public class Universe : MonoBehaviour {
 
-	public static readonly int maxPlanet = 10;
-	public static readonly int diversity = 10;
+	private static readonly int maxPlanet = 10;
+	private static readonly int diversity = 10;
 
-	public GameObject[] spawn = new GameObject[maxPlanet];
 	public GameObject prefabSpawn;
-	public bool[] freeSpawn = new bool[maxPlanet];
+	private GameObject[] spawn = new GameObject[maxPlanet];
+	private bool[] freeSpawn = new bool[maxPlanet];
 
 	//public float[,] distance = new float[maxPlanet,maxPlanet];
 
 	public GameObject[] prefab = new GameObject[diversity];
-	public GameObject[] planets = new GameObject[maxPlanet];
+	private GameObject[] planets = new GameObject[maxPlanet];
 	private int nbPlanet;
 
 	void Awake(){

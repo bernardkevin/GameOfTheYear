@@ -2,19 +2,16 @@
 using System.Collections;
 
 public abstract class IA : MonoBehaviour {
-	public int id,state,life,strenght;//state 0->free 1->working
-	public string name;
-	public Building job;
-	public Planet planet;
+	public int state,life,strength;//state 0->free 1->working
+	public string id,name;
+	public GameObject job;
+	public GameObject planet;
 
 	private Vector3 moveDir;
-	public float LR,time,lastTime;
-	public bool over;
+	private float LR,time,lastTime;
+	private bool over;
 
 	void Awake(){
-		// set planet
-		planet = gameObject.transform.parent.gameObject.GetComponent<Planet>();
-		GetComponent<GravityBody2d>().setAttractor(gameObject.transform.parent.gameObject.GetComponent<GravityAttractor2d>());
 
 	}
 
@@ -24,13 +21,13 @@ public abstract class IA : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(state == 0){
+		if(state == 0 && planet!=null){
 			walk();
 		}
 	}
 
 	void FixedUpdate(){
-		if(Time.time - lastTime < time && state == 0)
+		if(Time.time - lastTime < time && state == 0 && planet!=null)
 			GetComponent<Rigidbody2D>().MovePosition(GetComponent<Rigidbody2D>().position + (Vector2)transform.TransformDirection(moveDir) * Time.deltaTime);
 	}
 
@@ -52,7 +49,7 @@ public abstract class IA : MonoBehaviour {
 
 	public void Attack(){}
 
-	public void getHired(Building b){
+	public void getHired(GameObject b){
 		job = b;
 		state = 1;
 	}
@@ -63,10 +60,28 @@ public abstract class IA : MonoBehaviour {
 	}
 
 	public void Died(){
+		planet.GetComponent<Planet>().RmvBot(gameObject);
 		Destroy(gameObject);
 	}
 
+	public void OnTriggerEnter2D(Collider2D other){
+		if(other.tag == "Planet"){
+			planet = other.gameObject;
+			planet.GetComponent<Planet>().AddBot(gameObject);
+			GetComponent<GravityBody2d>().setAttractor(planet.GetComponent<GravityAttractor2d>());
+		}
+	}
+
+	public void OnTriggerExit2D(Collider2D other){
+		if(other.tag == "Planet"){
+			planet = null;
+			planet.GetComponent<Planet>().RmvBot(gameObject);
+			GetComponent<GravityBody2d>().setAttractor(null);
+		}
+	}
+
 	public void OnMouseDown(){
-		
+		CommandScript.selected[0]=gameObject;
+		CommandScript.setBotHUD(name,life,state);
 	}
 }

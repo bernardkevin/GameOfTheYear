@@ -11,7 +11,8 @@ public class GravityBody2d : MonoBehaviour {
 	}
 	
 	void Update () {
-		attractor.Attract(myTransform);
+		if(attractor != null)
+			attractor.Attract(myTransform);
 	}
 
 	public void setAttractor(GravityAttractor2d attractor){

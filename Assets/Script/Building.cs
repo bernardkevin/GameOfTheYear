@@ -55,6 +55,7 @@ public abstract class Building : MonoBehaviour {
 	}
 */
 	public void OnMouseDown(){
-
+		CommandScript.selected[1]=gameObject;
+		CommandScript.setBuildingHUD(name,life,state);
 	}
 }
