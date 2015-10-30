@@ -11,10 +11,6 @@ public abstract class IA : MonoBehaviour {
 	private float LR,time,lastTime;
 	private bool over;
 
-	void Awake(){
-
-	}
-
 	void Start(){
 		over = true;
 	}

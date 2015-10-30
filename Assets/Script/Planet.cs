@@ -63,7 +63,7 @@ public class Planet : MonoBehaviour {
 		if(buildingSelected != null){
 			AddBuilding();
 			buildingSelected.transform.rotation = Quaternion.Euler (0f, 0f, rotZ + rotationOffSet);
-			if(Input.GetKeyDown(KeyCode.Mouse0)){
+			if(Input.GetKeyDown(KeyCode.Mouse0) && buildingSelected.GetComponent<Building>().canSet){
 				buildingSelected.transform.parent = gameObject.transform;
 				buildings[nbBuilding] = buildingSelected;
 				buildings[nbBuilding].GetComponent<Building>().planet = gameObject;
@@ -78,6 +78,8 @@ public class Planet : MonoBehaviour {
 	
 	}
 
+	public void AddOres(int x){curOre = curOre+x;}
+
 	public void SelectBuilding(int x){
 		if(x>=0 && x<prefabBuilding.Length){
 			buildingSelected = Instantiate(prefabBuilding[x],transform.position,Quaternion.Euler (0f, 0f, rotZ + rotationOffSet)) as GameObject;
@@ -85,7 +87,7 @@ public class Planet : MonoBehaviour {
 		else buildingSelected = null;
 	}
 
-	void AddBuilding(){
+	public void AddBuilding(){
 		x = Input.mousePosition.x;
 		y = Input.mousePosition.y;
 

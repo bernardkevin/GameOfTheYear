@@ -5,28 +5,33 @@ public abstract class Building : MonoBehaviour {
 	public GameObject planet;
 	public string name;
 	public int life,progressBuild,placeAvailable,state,maxPlace;//state 0->OFF 1->ON
-	public bool isFull,isBuild;
+	public bool canSet;
 	public GameObject[] employes;
 
 	public void Start(){
-		isBuild=false;
 		employes = new GameObject[placeAvailable];
 	}
 
 
 	public void Update(){
+		/*
 		if(planet != null){
 			if(!isBuild){
 				Build();
 			}
 		}
+		*/
 	}
 
+/*
 	public void Build(){
 		progressBuild++;
-		if(progressBuild==100)isBuild = true;
+		if(progressBuild==100){
+			isBuild = true;
+			state = 1;
+		}
 	}
-/*
+
 	public int HireEmploye(){
 		Order();
 		int i = 0;
@@ -55,6 +60,18 @@ public abstract class Building : MonoBehaviour {
 		Destroy(gameObject);
 	}
 */
+	public void OnTriggerEnter2D(Collider2D other){
+		if(other.gameObject.tag == "Building"){
+			canSet = false;
+		}
+	}
+
+	public void OnTriggerExit2D(Collider2D other){
+		if(other.gameObject.tag == "Building"){
+			canSet = true;
+		}
+	}
+
 	public void OnMouseDown(){
 		CommandScript.selected[1]=gameObject;
 	}
