@@ -9,7 +9,8 @@ public abstract class Building : MonoBehaviour {
 	public GameObject[] employes;
 
 	public void Start(){
-		isBuild = false;
+		isBuild=false;
+		employes = new GameObject[placeAvailable];
 	}
 
 
@@ -56,6 +57,5 @@ public abstract class Building : MonoBehaviour {
 */
 	public void OnMouseDown(){
 		CommandScript.selected[1]=gameObject;
-		CommandScript.setBuildingHUD(name,life,state);
 	}
 }

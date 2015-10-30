@@ -82,6 +82,5 @@ public abstract class IA : MonoBehaviour {
 
 	public void OnMouseDown(){
 		CommandScript.selected[0]=gameObject;
-		CommandScript.setBotHUD(name,life,state);
 	}
 }

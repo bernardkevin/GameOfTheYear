@@ -5,9 +5,20 @@ public class Planet : MonoBehaviour {
 	public string id;
 	public string name;
 
-	public int maxOre,maxFood,maxEnergy;
-	public int curOre,curFood,curEnergy;
-	public int regOre,regFood,regEnergy;
+	private int curWater,maxWater;
+	public string water;
+
+	private int curFood,maxFood;
+	public string food;
+
+	private int curOre,maxOre;
+	public string ore;
+
+	private int curIngot,maxIngot;
+	public string ingot;
+
+	private int curEnergy,maxEnergy;
+	public string energy;
 
 	public float sunLevel,windLevel;
 
@@ -26,6 +37,8 @@ public class Planet : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
+		name = "Groot";
+
 		cam = GameObject.FindWithTag("MainCamera") as GameObject;
 		nbBot = 0;
 		nbBuilding = 0;
@@ -38,6 +51,15 @@ public class Planet : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		water = "water :"+curWater+"/"+maxWater;
+		food = "food :"+curFood+"/"+maxFood;
+		ore = "ore :"+curOre+"/"+maxOre;
+		ingot = "ingot :"+curIngot+"/"+maxIngot;
+		energy = "energy :"+curEnergy+"/"+maxEnergy;
+
+
+
 		if(buildingSelected != null){
 			AddBuilding();
 			buildingSelected.transform.rotation = Quaternion.Euler (0f, 0f, rotZ + rotationOffSet);
@@ -99,7 +121,5 @@ public class Planet : MonoBehaviour {
 
 	public void OnMouseDown(){
 		CommandScript.selected[2]=gameObject;
-		CommandScript.showPlanetHUD = true;
-		CommandScript.setPlanetHUD(name,maxOre,maxFood,maxEnergy,curOre,curFood,curEnergy,regOre,regFood,regEnergy,sunLevel,windLevel);
 	}
 }
