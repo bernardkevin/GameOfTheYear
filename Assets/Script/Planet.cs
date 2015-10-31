@@ -39,6 +39,15 @@ public class Planet : MonoBehaviour {
 	void Awake () {
 		name = "Groot";
 
+		maxWater = 10;
+		maxFood = 10;
+		maxOre = 10;
+		maxIngot = 10;
+		maxEnergy = 10;
+
+		sunLevel = 1.2f;
+		windLevel = 1.2f;
+
 		cam = GameObject.FindWithTag("MainCamera") as GameObject;
 		nbBot = 0;
 		nbBuilding = 0;
@@ -78,7 +87,44 @@ public class Planet : MonoBehaviour {
 	
 	}
 
-	public void AddOres(int x){curOre = curOre+x;}
+	public void AddWater(int x){
+		curWater = curWater+x;
+		if(curWater>maxWater){
+			curWater = maxWater;
+		}
+	}
+
+	public void AddMaxWater(int x){
+		maxWater+=x;
+	}
+
+	public void AddFood(int x){
+		curFood = curFood+x;
+		if(curFood>maxFood){
+			curFood = maxFood;
+		}
+	}
+
+	public void AddOres(int x){
+		curOre = curOre+x;
+		if(curOre>maxOre){
+			curOre = maxOre;
+		}
+	}
+
+	public void AddSolarEnergy(int x){
+		curEnergy = curEnergy + (int)(x*sunLevel);
+		if(curEnergy>maxEnergy){
+			curEnergy = maxEnergy;
+		}
+	}
+
+	public void AddWindEnergy(int x){
+		curEnergy = curEnergy + (int)(x*windLevel);
+		if(curEnergy>maxEnergy){
+			curEnergy = maxEnergy;
+		}
+	}
 
 	public void SelectBuilding(int x){
 		if(x>=0 && x<prefabBuilding.Length){

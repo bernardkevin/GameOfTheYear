@@ -73,6 +73,7 @@ public abstract class Building : MonoBehaviour {
 	}
 
 	public void OnMouseDown(){
-		CommandScript.selected[1]=gameObject;
+		if(planet!=null)
+			CommandScript.selected[1]=gameObject;
 	}
 }
